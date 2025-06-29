@@ -4,10 +4,10 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0', // 👈 allows external/local network access
-    port: 3000,       // 👈 optional for local only
+    host: '0.0.0.0', 
+    port: 3000,      
   },
   build: {
-    outDir: 'dist',   // 👈 this is the default Vercel expects
+    outDir: 'dist',  
   },
 })
