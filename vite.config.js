@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 3000, // 👈 change port here
+    host: '0.0.0.0', // 👈 allows external/local network access
+    port: 3000,       // 👈 optional for local only
+  },
+  build: {
+    outDir: 'dist',   // 👈 this is the default Vercel expects
   },
 })
